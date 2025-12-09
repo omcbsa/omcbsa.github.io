@@ -18,26 +18,26 @@
   <main class="container">
     <section class="panel main-video">
       <div class="panel-header">
-        <h2>Video</h2>
-        <p class="muted">A short introductory video.</p>
+        <h2>A short introductory video</h2>
+        <!-- <p class="muted">A short introductory video.</p> -->
       </div>
 
       <div class="preview">
         <!-- Main video loaded from assets directory (replace assets/main.mp4 as needed) -->
-        <video id="main-video" controls muted playsinline preload="metadata" src="assets/main.mp4" aria-label="Main video">
+        <video id="main-video" controls playsinline preload="metadata" src="assets/main.mp4" aria-label="Main video">
           Your browser does not support the video element.
         </video>
       </div>
     </section>
 
     <section class="panel abstract">
-      <h2>Abstract / Short Description</h2>
+      <h2>Short Description</h2>
       <div id="abstract" class="abstract-text" aria-label="Abstract">
         <p>
-          This is placeholder text for the abstract / short description area. Replace this text with the short description or abstract for the supplementary materials — I will update this later.
+          Learned manipulation policies are increasingly capable of generating rich motions for abstract “hands” and are attractive in practice because they rely on easily collected demonstrations and transfer across robot platforms. Executing these trajectories on multi-arm robots, however, is not trivial. Multi-hand policy outputs must be assigned to physical arms, each arm must realize a configuration-space motion that tracks its prescribed end-effector trajectory, and all arms must respect kinematic limits and avoid collisions. In the absence of algorithms that directly address this problem, practitioners typically extend single-arm inverse-kinematics (IK) pipelines in an ad hoc way, with no guarantees of feasibility or safety. In this work, we close this execution gap with a search-based framework that is theoretically complete for grounding policy-generated multi-hand trajectories onto physical multi-arm systems. Building on Conflict-Based Search, our method explicitly searches over both the discrete assignment of trajectories to arms and the continuous Jacobian null spaces of redundant manipulators, using redundancy to avoid inter-arm collisions while tracking the prescribed motions. This unified treatment of assignment and null-space motion yields a practically efficient planner that safely realizes coordinated manipulation-policy outputs on multi-arm robots.
         </p>
       </div>
-      <div class="hint muted">Tip: Update this description in the source when ready.</div>
+      <!-- <div class="hint muted">Tip: Update this description in the source when ready.</div> -->
     </section>
 
     <section class="panel experiments">
