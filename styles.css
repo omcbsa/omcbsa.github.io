@@ -126,11 +126,12 @@ body{
   flex-direction:column;
   gap:8px;
   align-items:stretch;
+  height:100%;
 }
 
 .card video{
   width:100%;
-  flex:1;
+  height:100%;
   height:auto;
   object-fit:cover;
   border-radius:8px;
