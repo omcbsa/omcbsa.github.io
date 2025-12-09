@@ -78,7 +78,7 @@ body{
 }
 
 .drop-ui{text-align:center; color:var(--muted); font-size:14px}
-.preview{ flex:1 1 360px; display:flex; align-items:center; justify-content:center; }
+.preview{ flex:1 1 500px; display:flex; align-items:center; justify-content:center; }
 .preview video{
   max-width:100%;
   aspect-ratio: 16 / 9;   /* or 9/16 if portrait */
