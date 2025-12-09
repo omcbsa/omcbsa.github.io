@@ -19,75 +19,80 @@
     <section class="panel main-video">
       <div class="panel-header">
         <h2>Main Video</h2>
-        <p class="muted">Upload the primary video that showcases the main result (one file). Supported: mp4, webm.</p>
+        <p class="muted">Primary video demonstrating the main result.</p>
       </div>
 
-      <div class="upload-row">
-        <div id="main-drop" class="dropzone" aria-live="polite">
-          <input id="main-upload" type="file" accept="video/*" />
-          <div class="drop-ui">
-            <strong>Upload main video</strong>
-            <small>Drag & drop here or click to choose a file</small>
-          </div>
-        </div>
-
-        <div class="preview">
-          <video id="main-preview" controls muted playsinline poster="" aria-label="Main video preview">
-            Your browser does not support the video element.
-          </video>
-        </div>
+      <div class="preview">
+        <!-- Main video loaded from assets directory (replace assets/main.mp4 as needed) -->
+        <video id="main-video" controls muted playsinline preload="metadata" src="assets/main.mp4" aria-label="Main video">
+          Your browser does not support the video element.
+        </video>
       </div>
     </section>
 
     <section class="panel abstract">
       <h2>Abstract / Short Description</h2>
-      <div id="abstract" contenteditable="true" class="editable" aria-label="Abstract; editable">
-        <p>Paste a short abstract or short description of the experiments here. This is editable in the browser and can be copied into the paper or README.</p>
+      <div id="abstract" class="abstract-text" aria-label="Abstract">
+        <p>
+          This is placeholder text for the abstract / short description area. Replace this text with the short description or abstract for the supplementary materials — I will update this later.
+        </p>
       </div>
-      <div class="hint muted">Tip: Edit this text in the browser. It won't be published to a server — copy it elsewhere to save permanently.</div>
+      <div class="hint muted">Tip: Update this description in the source when ready.</div>
     </section>
 
     <section class="panel experiments">
       <div class="panel-header">
         <h2>Physical Experiments</h2>
-        <p class="muted">Add a few short videos from experiments (each becomes an inline player).</p>
-      </div>
-
-      <div class="controls">
-        <label class="btn">
-          Add physical video
-          <input id="phys-upload" type="file" accept="video/*" multiple hidden />
-        </label>
-        <small class="muted">Select one or more files</small>
+        <p class="muted">Three recorded physical experiment clips (loaded from /assets).</p>
       </div>
 
       <div id="phys-grid" class="grid" aria-live="polite">
-        <!-- videos appended here -->
+        <!-- Three physical experiment videos from assets -->
+        <figure class="card">
+          <video controls playsinline preload="metadata" src="assets/phys1.mp4" title="Physical experiment 1">Your browser does not support the video element.</video>
+          <figcaption class="meta"><div>Physical experiment 1</div></figcaption>
+        </figure>
+
+        <figure class="card">
+          <video controls playsinline preload="metadata" src="assets/phys2.mp4" title="Physical experiment 2">Your browser does not support the video element.</video>
+          <figcaption class="meta"><div>Physical experiment 2</div></figcaption>
+        </figure>
+
+        <figure class="card">
+          <video controls playsinline preload="metadata" src="assets/phys3.mp4" title="Physical experiment 3">Your browser does not support the video element.</video>
+          <figcaption class="meta"><div>Physical experiment 3</div></figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="panel experiments">
       <div class="panel-header">
         <h2>Simulated Experiments</h2>
-        <p class="muted">Upload simulated runs or rendered clips. Keep each clip short for quick review.</p>
-      </div>
-
-      <div class="controls">
-        <label class="btn">
-          Add simulated video
-          <input id="sim-upload" type="file" accept="video/*" multiple hidden />
-        </label>
-        <small class="muted">Select one or more files</small>
+        <p class="muted">Three simulated experiment clips (loaded from /assets).</p>
       </div>
 
       <div id="sim-grid" class="grid" aria-live="polite">
-        <!-- videos appended here -->
+        <!-- Three simulated experiment videos from assets -->
+        <figure class="card">
+          <video controls playsinline preload="metadata" src="assets/sim1.mp4" title="Simulated experiment 1">Your browser does not support the video element.</video>
+          <figcaption class="meta"><div>Simulated experiment 1</div></figcaption>
+        </figure>
+
+        <figure class="card">
+          <video controls playsinline preload="metadata" src="assets/sim2.mp4" title="Simulated experiment 2">Your browser does not support the video element.</video>
+          <figcaption class="meta"><div>Simulated experiment 2</div></figcaption>
+        </figure>
+
+        <figure class="card">
+          <video controls playsinline preload="metadata" src="assets/sim3.mp4" title="Simulated experiment 3">Your browser does not support the video element.</video>
+          <figcaption class="meta"><div>Simulated experiment 3</div></figcaption>
+        </figure>
       </div>
     </section>
 
     <footer class="foot-note">
       <div class="container">
-        <small class="muted">This page is a lightweight supplementary site intended for quick browsing of media supporting a paper. When you are ready, push videos into an /assets directory in this repository and replace the in-page previews with permanent URLs.</small>
+        <small class="muted">This page is a lightweight supplementary site intended for quick browsing of media supporting a paper. When you are ready, push videos into an /assets directory in this repository and update filenames here.</small>
       </div>
     </footer>
   </main>
