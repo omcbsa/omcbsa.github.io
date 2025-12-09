@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paper — Multimedia Supplement</title>
+  <meta name="description" content="Supplementary website for a paper: main video, physical experiments, simulated experiments, and short description." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Paper Title — Supplementary Materials</h1>
+      <p class="tagline">Concise demonstrations and supporting videos</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel main-video">
+      <div class="panel-header">
+        <h2>Main Video</h2>
+        <p class="muted">Upload the primary video that showcases the main result (one file). Supported: mp4, webm.</p>
+      </div>
+
+      <div class="upload-row">
+        <div id="main-drop" class="dropzone" aria-live="polite">
+          <input id="main-upload" type="file" accept="video/*" />
+          <div class="drop-ui">
+            <strong>Upload main video</strong>
+            <small>Drag & drop here or click to choose a file</small>
+          </div>
+        </div>
+
+        <div class="preview">
+          <video id="main-preview" controls muted playsinline poster="" aria-label="Main video preview">
+            Your browser does not support the video element.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel abstract">
+      <h2>Abstract / Short Description</h2>
+      <div id="abstract" contenteditable="true" class="editable" aria-label="Abstract; editable">
+        <p>Paste a short abstract or short description of the experiments here. This is editable in the browser and can be copied into the paper or README.</p>
+      </div>
+      <div class="hint muted">Tip: Edit this text in the browser. It won't be published to a server — copy it elsewhere to save permanently.</div>
+    </section>
+
+    <section class="panel experiments">
+      <div class="panel-header">
+        <h2>Physical Experiments</h2>
+        <p class="muted">Add a few short videos from experiments (each becomes an inline player).</p>
+      </div>
+
+      <div class="controls">
+        <label class="btn">
+          Add physical video
+          <input id="phys-upload" type="file" accept="video/*" multiple hidden />
+        </label>
+        <small class="muted">Select one or more files</small>
+      </div>
+
+      <div id="phys-grid" class="grid" aria-live="polite">
+        <!-- videos appended here -->
+      </div>
+    </section>
+
+    <section class="panel experiments">
+      <div class="panel-header">
+        <h2>Simulated Experiments</h2>
+        <p class="muted">Upload simulated runs or rendered clips. Keep each clip short for quick review.</p>
+      </div>
+
+      <div class="controls">
+        <label class="btn">
+          Add simulated video
+          <input id="sim-upload" type="file" accept="video/*" multiple hidden />
+        </label>
+        <small class="muted">Select one or more files</small>
+      </div>
+
+      <div id="sim-grid" class="grid" aria-live="polite">
+        <!-- videos appended here -->
+      </div>
+    </section>
+
+    <footer class="foot-note">
+      <div class="container">
+        <small class="muted">This page is a lightweight supplementary site intended for quick browsing of media supporting a paper. When you are ready, push videos into an /assets directory in this repository and replace the in-page previews with permanent URLs.</small>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
